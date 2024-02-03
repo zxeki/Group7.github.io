@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lanyards</title>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body{
+        background-color: whitesmoke;
+    }
+
+    /*
+        CSS NAV AND SECTION 1
+    */
+    #Sec1{
+        width: 100%;
+        height: 100vh;
+        background-color: transparent;
+    }
+
+    nav{
+        background-color: whitesmoke;
+        border-bottom: solid 0.5vh black;
+        width: 100%;
+        height: 13vh;
+        display: flex;
+        flex-direction: row;
+        gap: 2%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #Logo-Container{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 10%;
+    }
+
+    .logo{
+        width: 100%;
+    }
+
+    .al{
+        text-decoration: none;
+        color: black;
+        font-family: sans-serif, Arial, Helvetica;
+        font-size: 1vw;
+    }
+
+    .al:hover{
+        text-decoration: none;
+        color: black;
+        font-family: sans-serif, Arial, Helvetica;
+        font-size: 1.8vh;
+        padding: 0.2%;
+        border-bottom: solid black 0.5vh;
+        transition: 0.5s;
+    }
+
+    .themebtn{
+        background-color: whitesmoke;
+        border: 0;
+        font-family: sans-serif, Arial, Helvetica;
+        font-size: 1.8vh;
+    }
+
+    .themebtn:hover{
+        text-decoration: none;
+        color: black;
+        font-family: sans-serif, Arial, Helvetica;
+        font-size: 1.1vw;
+        transition: 0.5s;
+    }
+
+    /*
+        CSS FOR SEC 1 THE VIDEO 
+    */
+
+    #VidContainer{
+        width: 100%;
+        height: 87vh;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+    }
+
+    .vid-frame{
+        width: 100%;
+        height: 70vh;
+        margin-bottom: 3.5%;
+    }
+
+    .imghd{
+        width: 100%;
+        height: 100%;
+    }
+
+    /*
+        CSS NAV AND SECTION 1
+    */
+    #Sec2{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background-color: transparent;
+    }
+
+    .n2{
+        width: 100%;
+        height: 15vh;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+    }
+
+    .s2lft{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+        margin-left: 10%;
+    }
+
+    .s2lft button{
+        background-color: transparent;
+        border: transparent solid 0;
+        font-size: 1.8vw;
+    }
+
+    .s2lft button:hover{
+        background-color: transparent;
+        border: transparent solid 0;
+        font-size: 1.8vw;
+        border-bottom: 3px solid black;
+    }
+
+    .s2rht{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        align-items: center;
+        gap: 5%;
+        margin-right: 5%;
+    }
+
+    .s2rht button{
+        background-color: transparent;
+        border: transparent solid 0;
+        font-size: 1.8vw;
+    }
+
+    .s2rht button:hover{
+        background-color: transparent;
+        border: transparent solid 0;
+        font-size: 1.8vw;
+        border-bottom: 3px solid black;
+    }
+
+    header{
+        width: 100%;
+        height: 15vh;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    header h1{
+        font-size: 2.3vw;
+    }
+
+    .img-cont1{
+        width: 100%;
+        height: 75vh;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 5%;
+    }
+
+    .img-cont1 div{
+        width: 20%;
+        height: 90%;
+        overflow: hidden;
+    }
+
+    .img-cont1 div:hover{
+        width: 20%;
+        height: 95%;
+        box-shadow: 10px 10px rgba(46, 46, 46, 0.205);
+        overflow: hidden;
+        transition: 2s;
+    }
+
+    .img-cont1 div img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .img-cont1 div img:hover{
+        width: 100%;
+        height: 100%;
+        scale: 1.05;
+        transition: 2s;
+    }
+
+    /*
+        CSS FOR FOOTER
+    */
+    #footer{
+        margin-bottom: 0%;
+        width: 100%;
+        height: 15vh;
+        background-color: gainsboro;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #d1{
+        width: 20%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .lg{
+        width: 40%;
+    }
+
+    #d2{
+        width: 20%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4%;
+    }
+
+    #d2 p{
+        font-size: 1vw;
+        font-family: sans-serif, Arial, Helvetica; 
+    }
+
+    .fthead{
+        font-size: 1.3vw;
+        font-family: sans-serif, Arial, Helvetica; 
+    }
+
+    #d3{
+        width: 20%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4%;
+    }
+
+    #d3 p{
+        font-family: sans-serif, Arial, Helvetica; 
+        font-size: 1vw;
+        position: relative;
+        top: 10%;   
+    }
+
+    /*
+        CSS NAV AND JS
+    */
+    .bdy{
+        background-color: black;
+    }
+
+    .bot{
+        color: whitesmoke;
+    }
+
+    .na{
+        width: 100%;
+        height: 15vh;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        border-bottom: solid 0.5vh whitesmoke;
+    }
+
+    .headivari{
+        font-size: 2.3vw;
+        color: whitesmoke;
+    }
+    @media only screen and (max-width: 800px){
+
+        *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body{
+        background-color: whitesmoke;
+    }
+
+    /*
+        CSS NAV AND SECTION 1
+    */
+    #Sec1{
+        width: 100%;
+        height: 70vh;
+        background-color: transparent;
+    }
+
+    nav{
+        background-color: whitesmoke;
+        border-bottom: solid 0.5vh black;
+        width: 100%;
+        height: 10vh;
+        display: flex;
+        flex-direction: row;
+        gap: 2%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #Logo-Container{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 25%;
+    }
+
+    .logo{
+        width: 100%;
+    }
+
+    .al{
+        text-decoration: none;
+        color: black;
+        font-family: sans-serif, Arial, Helvetica;
+        font-size: 1.5vw;
+    }
+
+    .al:hover{
+        text-decoration: none;
+        color: black;
+        font-family: sans-serif, Arial, Helvetica;
+        font-size: 1.8vh;
+        padding: 0.2%;
+        border-bottom: solid black 0.5vh;
+        transition: 0.5s;
+    }
+
+    .themebtn{
+        background-color: whitesmoke;
+        border: 0;
+        font-family: sans-serif, Arial, Helvetica;
+        font-size: 1.8vh;
+    }
+
+    .themebtn:hover{
+        text-decoration: none;
+        color: black;
+        font-family: sans-serif, Arial, Helvetica;
+        font-size: 1.1vw;
+        transition: 0.5s;
+    }
+
+    /*
+        CSS FOR SEC 1 THE VIDEO 
+    */
+
+    #VidContainer{
+        width: 100%;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+    }
+
+    .vid-frame{
+        width: 100%;
+        height: 60vh;
+    }
+
+    .imghd{
+        width: 100%;
+        height: 80%;
+    }
+
+    /*
+        CSS NAV AND SECTION 1
+    */
+    #Sec2{
+        width: 100%;
+        height: 65vh;
+        display: flex;
+        flex-direction: column;
+        background-color: transparent;
+    }
+
+    .n2{
+        width: 100%;
+        height: 15vh;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+    }
+
+    .s2lft{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+        margin-left: 10%;
+    }
+
+    .s2lft button{
+        background-color: transparent;
+        border: transparent solid 0;
+        font-size: 1.8vw;
+    }
+
+    .s2lft button:hover{
+        background-color: transparent;
+        border: transparent solid 0;
+        font-size: 1.8vw;
+        border-bottom: 3px solid black;
+    }
+
+    .s2rht{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        align-items: center;
+        gap: 5%;
+        margin-right: 5%;
+    }
+
+    .s2rht button{
+        background-color: transparent;
+        border: transparent solid 0;
+        font-size: 1.8vw;
+    }
+
+    .s2rht button:hover{
+        background-color: transparent;
+        border: transparent solid 0;
+        font-size: 1.8vw;
+        border-bottom: 3px solid black;
+    }
+
+    header{
+        width: 100%;
+        height: 15vh;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    header h1{
+        font-size: 2.3vw;
+    }
+
+    .img-cont1{
+        width: 100%;
+        height: 30vh;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 10%;
+    }
+
+    .img-cont1 div{
+        width: 20%;
+        height: 90%;
+        overflow: hidden;
+    }
+
+    .img-cont1 div:hover{
+        width: 20%;
+        height: 95%;
+        box-shadow: 10px 10px rgba(46, 46, 46, 0.205);
+        overflow: hidden;
+        transition: 2s;
+    }
+
+    .img-cont1 div img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .img-cont1 div img:hover{
+        width: 100%;
+        height: 100%;
+        scale: 1.05;
+        transition: 2s;
+    }
+
+    /*
+        CSS FOR FOOTER
+    */
+    #footer{
+        margin-bottom: 0%;
+        width: 100%;
+        height: 15vh;
+        background-color: gainsboro;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #d1{
+        width: 20%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .lg{
+        width: 40%;
+    }
+
+    #d2{
+        width: 20%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4%;
+    }
+
+    #d2 p{
+        font-size: 1vw;
+        font-family: sans-serif, Arial, Helvetica; 
+    }
+
+    .fthead{
+        font-size: 1.3vw;
+        font-family: sans-serif, Arial, Helvetica; 
+    }
+
+    #d3{
+        width: 20%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4%;
+    }
+
+    #d3 p{
+        font-family: sans-serif, Arial, Helvetica; 
+        font-size: 1vw;
+        position: relative;
+        top: 10%;   
+    }
+
+    /*
+        CSS NAV AND JS
+    */
+    .bdy{
+        background-color: black;
+    }
+
+    .bot{
+        color: whitesmoke;
+    }
+
+    .na{
+        width: 100%;
+        height: 15vh;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        border-bottom: solid 0.5vh whitesmoke;
+    }
+
+    .headivari{
+        font-size: 2.3vw;
+        color: whitesmoke;
+    }
+
+    }
+    </style>
+    <script>
+    function mainLanyard(){
+        document.querySelector('.img-frame1').innerHTML = '<img src="./Images/LANYARDS_PAGE/LANYARD PICS/COMSCI - MOCKUP_1.png" class="l1">';
+        document.querySelector('.img-frame2').innerHTML = '<img src="./Images/LANYARDS_PAGE/LANYARD PICS/IT JAPANESE MAPUAN (BLACK) - MOCKUP_2.png" class="l2">';
+        document.querySelector('.img-frame3').innerHTML = '<img src="./Images/LANYARDS_PAGE/LANYARD PICS/JAPANESE MAPUAN (BLACK) - MOCKUP_3.png" class="l3">';
+    }
+    
+    function CategoryOne(){
+        document.querySelector('.img-frame1').innerHTML = '<img src="./Images/LANYARDS_PAGE/LANYARD PICS/JAPANESE MAPUAN (CREAM) - MOCKUP_4.png" class="l1">';
+        document.querySelector('.img-frame2').innerHTML = '<img src="./Images/LANYARDS_PAGE/LANYARD PICS/ORIG RED - MOCKUP_5.png" class="l2">';
+        document.querySelector('.img-frame3').innerHTML = '<img src="./Images/LANYARDS_PAGE/LANYARD PICS/ORIG RED (YELLOW FONT) - MOCKUP_6.png" class="l3">';
+    }
+    
+    function CategoryTwo(){
+        document.querySelector('.img-frame1').innerHTML = '<img src="./Images/LANYARDS_PAGE/LANYARD PICS/PADAYON MAPUAN - MOCKUP_7.png" class="l1">';
+        document.querySelector('.img-frame2').innerHTML = '<img src="./Images/LANYARDS_PAGE/LANYARD PICS/PANDAYON MAPUAN (CREAM) - MOCKUP_8.png" class="l2">';
+        document.querySelector('.img-frame3').innerHTML = '<img src="./Images/LANYARDS_PAGE/LANYARD PICS/COMING SOON.png" class="l3">';
+    }
+    
+    function dark(){
+        document.querySelector('body').classList.toggle('bdy');
+        document.querySelector('.b1').classList.toggle('bot');
+        document.querySelector('.b2').classList.toggle('bot');
+        document.querySelector('.b3').classList.toggle('bot');
+        document.querySelector('.n2').classList.toggle('na');
+        document.querySelector('.headi').classList.toggle('headivari');
+    }
+    </script>
+</head>
+<body>
+    <section id="Sec1">
+        <nav>
+            <div id="Logo-Container">
+                <a href="index.html"><img src="./Images/HOMEPAGE/Brand/LOGO.png" class="logo"></a>
+            </div>
+            <a href="collections.html" class="al">COLLECTIONS</a>
+            <a href="sale.html" class="al">SALE</a>
+            <a href="newarrivals.html" class="al">NEW ARRIVALS</a>
+            <a href="lanyards.html" class="al">LANYARDS</a>
+            <a href="bags.html" class="al">BAGS</a>
+            <a href="store.html" class="al">STORE</a>
+            <a href="aboutus.html" class="al">ABOUT US</a>
+            <input type="button" value="🌙" class="themebtn" onclick="dark()">
+        </nav>
+
+        <div id="VidContainer">          
+          <div class="vid-frame">
+            <img src="./Images/LANYARDS_PAGE/Banner/LANYARDS BANNER.png" class="imghd"></img>
+          </div>
+        </div>
+    </section>
+
+    <section id="Sec2">
+        <nav class="n2"> 
+            <div  class="s2lft" onclick="mainLanyard()"><button class="b1">MAIN LANYARDS</button></div>
+            <div class="s2rht">
+            <button onclick="CategoryOne()" class="b2">CATEGORY 1</button>
+            <button onclick="CategoryTwo()" class="b3">CATEGORY 2</button>
+            </div>
+        </nav>
+
+       <header>
+            <h1 class="headi">SHOWCASE YOUR STYLE</h1>
+       </header>
+
+       <div class="img-cont1">
+            <div class="img-frame1"><img src="./Images/LANYARDS_PAGE/LANYARD PICS/COMSCI - MOCKUP_1.png" class="l1"></div>
+            <div class="img-frame2"><img src="./Images/LANYARDS_PAGE/LANYARD PICS/IT JAPANESE MAPUAN (BLACK) - MOCKUP_2.png" class="l2"></div>
+            <div class="img-frame3"><img src="./Images/LANYARDS_PAGE/LANYARD PICS/JAPANESE MAPUAN (BLACK) - MOCKUP_3.png" class="l3"></div>
+       </div>
+    </section>
+
+    <section id="footer"> 
+        <div id="d1">
+            <img src="./Images/HOMEPAGE/Brand/D.png" class="lg">
+        </div>
+
+        <div id="d2">
+            <h1 class="fthead">DEVELOPERS</h1>
+            <p>YVES DELA CRUZ</p>
+            <p>KARL FALCULAN</p>
+            <p>EVAN VINCENT LIM</p>
+        </div>
+
+        <div id="d3"> 
+            <p>LUIS ARNOLD RESPCIO</p>
+            <p>DYLAN SALAZAR</p>
+            <p>DANIEL SANTILLAN</p>
+        </div>
+    </section>
+</body>
+</html>
+

@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardi Styles</title>
+    <style>
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: whitesmoke;
+    overflow-x: hidden;
+}
+
+/*
+    CSS NAV AND SECTION 1
+*/
+#Sec1{
+    width: 100%;
+    height: 70vh;
+    background-color: transparent;
+}
+
+nav{
+    background-color: whitesmoke;
+    border-bottom: solid 0.5vh black;
+    width: 100%;
+    height: 13vh;
+    display: flex;
+    flex-direction: row;
+    gap: 2%;
+    align-items: center;
+    justify-content: center;
+}
+
+#Logo-Container{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10%;
+}
+
+.logo{
+    width: 100%;
+}
+
+.al{
+    text-decoration: none;
+    color: black;
+    font-family: sans-serif, Arial, Helvetica;
+    font-size: 1vw;
+}
+
+.al:hover{
+    text-decoration: none;
+    color: black;
+    font-family: sans-serif, Arial, Helvetica;
+    font-size: 1.8vh;
+    padding: 0.2%;
+    border-bottom: solid black 0.5vh;
+    transition: 0.5s;
+}
+
+.themebtn{
+    background-color: whitesmoke;
+    border: 0;
+    font-family: sans-serif, Arial, Helvetica;
+    font-size: 1.8vh;
+}
+
+.themebtn:hover{
+    text-decoration: none;
+    color: black;
+    font-family: sans-serif, Arial, Helvetica;
+    font-size: 1.1vw;
+    transition: 0.5s;
+}
+
+/*
+    CSS FOR THE video
+*/
+#video-Container{
+    width: 100%;
+    height: 87vh;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.vid-frame{
+    width: 100%;
+    height: 62vh;
+    background-color: transparent;
+    position: relative;
+    top: 10%;
+}
+
+.vid{
+    width: 100vw;
+    height: 100%;
+    
+}
+
+.text{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    color: whitesmoke;
+    font-family: sans-serif, Arial, Helvetica;
+    font-size: 3.5vw;
+    padding: 20px;
+    border: whitesmoke solid 3px;
+    position: relative;
+    bottom: 40%;  
+}
+
+/*
+    CSS FOR SECTION 2
+*/
+#Sec2{
+    background-color: transparent;
+    border-bottom: 3px solid black;
+    width: 100%;
+    height: 80vh;
+}
+
+.img{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2%;
+}
+
+.pic1, .pic2, .pic3, .pic4{
+    width: 18%;
+    border: 2px solid black;
+}
+
+#lable-con{
+background-color: transparent;
+display: flex;
+align-items: center;
+justify-content: start;
+gap: 10%;
+position: relative;
+bottom: 30%;
+}
+
+#lable-con div{
+width: 12%;
+height: 100%;
+position: relative;
+left: 7.5%;
+}
+
+#lable-con div label{
+    font-size: 1.5vw;
+    font-family: sans-serif, Arial, Helvetica;
+}
+
+
+/*
+    CSS FOR SECTION 3
+*/
+#Sec3{
+    background-color: transparent;
+    border-bottom: 3px solid black;
+    width: 100%;
+    height: 100vh;
+}
+
+#Sec3hd{
+    position: relative;
+    top: 135px;
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4vw;
+    font-family:sans-serif, Arial, Helvetica;
+    color: black;
+}
+
+#Sec3img{
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2%;
+}
+
+.insta1, .insta2, .insta3,.insta4{
+    width: 18%;
+    height: 45%;
+    border: 2px solid black;
+}
+
+/*
+    CSS FOR FOOTER
+*/
+#footer{
+    margin-bottom: 0%;
+    width: 100%;
+    height: 15vh;
+    background-color: gainsboro;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#d1{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.lg{
+    width: 40%;
+}
+
+#d2{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4%;
+}
+
+#d2 p{
+    font-size: 1vw;
+    font-family: sans-serif, Arial, Helvetica; 
+}
+
+.fthead{
+    font-size: 1.3vw;
+    font-family: sans-serif, Arial, Helvetica; 
+}
+
+#d3{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4%;
+}
+
+#d3 p{
+    font-family: sans-serif, Arial, Helvetica; 
+    font-size: 1vw;
+    position: relative;
+    top: 10%;   
+}
+
+
+/*
+    CSS JS FUNCTION
+*/
+.blk{
+ background-color: black;
+}
+
+.s2{
+    background-color: black;
+    border-bottom: 3px solid whitesmoke;
+    width: 100%;
+    height: 100vh;
+}
+
+.s3hd{
+    font-size: 4vw;
+    font-family:sans-serif, Arial, Helvetica;
+    color: whitesmoke;
+}
+
+.lable-con{
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 10%;
+    position: relative;
+    bottom: 25%;
+    }
+    
+.lable-cond{
+    width: 12%;
+    height: 100%;
+    position: relative;
+    left: 7.5%;
+    color: whitesmoke;
+    font-size: 1.5vw;
+    font-family: sans-serif, Arial, Helvetica;
+    }
+
+ .Se2{
+    background-color: transparent;
+     width: 100%;
+     height: 80vh;
+ }
+        
+@media only screen and (max-width: 800px){
+    *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: whitesmoke;
+    overflow-x: hidden;
+}
+
+/*
+    CSS NAV AND SECTION 1
+*/
+#Sec1{
+    width: 100%;
+    height: 70vw;
+    background-color: transparent;
+}
+
+nav{
+    background-color: whitesmoke;
+    border-bottom: solid 0.5vh black;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    gap: 2%;
+    align-items: center;
+    justify-content: center;
+}
+
+#Logo-Container{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+}
+
+.logo{
+    width: 100%;
+}
+
+.al{
+    text-decoration: none;
+    color: black;
+    font-family: sans-serif, Arial, Helvetica;
+    font-size: 1.5vw;
+}
+
+.al:hover{
+    text-decoration: none;
+    color: black;
+    font-family: sans-serif, Arial, Helvetica;
+    font-size: 1.8vh;
+    padding: 0.2%;
+    border-bottom: solid black 0.5vh;
+    transition: 0.5s;
+}
+
+.themebtn{
+    background-color: whitesmoke;
+    border: 0;
+    font-family: sans-serif, Arial, Helvetica;
+    font-size: 1.8vh;
+}
+
+.themebtn:hover{
+    text-decoration: none;
+    color: black;
+    font-family: sans-serif, Arial, Helvetica;
+    font-size: 1.1vw;
+    transition: 0.5s;
+}
+
+/*
+    CSS FOR THE video
+*/
+#video-Container{
+    width: 100%;
+    height: 20vh;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.vid-frame{
+    width: 100%;
+    height: 62vh;
+    background-color: transparent;
+    position: relative;
+    top: 10%;
+}
+
+.vid{
+    width: 100vw;
+    height: 100%;
+    
+}
+
+.text{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    color: whitesmoke;
+    font-family: sans-serif, Arial, Helvetica;
+    font-size: 3.5vw;
+    padding: 20px;
+    border: whitesmoke solid 3px;
+    position: relative;
+    bottom: 40%;  
+}
+
+/*
+    CSS FOR SECTION 2
+*/
+#Sec2{
+    background-color: transparent;
+    border-bottom: 3px solid black;
+    width: 100%;
+    height: 30vh;
+}
+
+.img{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2%;
+}
+
+.pic1, .pic2, .pic3, .pic4{
+    width: 20%;
+    border: 2px solid black;
+}
+
+#lable-con{
+background-color: transparent;
+display: flex;
+align-items: center;
+justify-content: start;
+gap: 10%;
+position: relative;
+top: 5%;
+}
+
+#lable-con div{
+width: 12%;
+height: 100%;
+position: relative;
+left: 8%;
+}
+
+#lable-con div label{
+    font-size: 2vw;
+    font-family: sans-serif, Arial, Helvetica;
+}
+
+
+/*
+    CSS FOR SECTION 3
+*/
+#Sec3{
+    background-color: transparent;
+    border-bottom: 3px solid black;
+    width: 100%;
+    height: 50vh;
+}
+
+#Sec3hd{
+    position: relative;
+    top: 10px;
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4vw;
+    font-family:sans-serif, Arial, Helvetica;
+    color: black;
+}
+
+#Sec3img{
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2%;
+}
+
+.insta1, .insta2, .insta3,.insta4{
+    width: 20%;
+    height: 70%;
+    border: 2px solid black;
+}
+
+/*
+    CSS FOR FOOTER
+*/
+#footer{
+    width: 100%;
+    height: 15vh;
+    background-color: gainsboro;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#d1{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.lg{
+    width: 40%;
+}
+
+#d2{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4%;
+}
+    
+    #d2 h1 {
+        font-size: 2vw;
+    }
+
+#d2 p{
+    font-size: 1.5vw;
+    font-family: sans-serif, Arial, Helvetica; 
+}
+
+.fthead{
+    font-size: 1.3vw;
+    font-family: sans-serif, Arial, Helvetica; 
+}
+
+#d3{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4%;
+}
+
+#d3 p{
+    font-family: sans-serif, Arial, Helvetica; 
+    font-size: 1.5vw;
+    position: relative;
+    top: 10%;   
+}
+
+
+/*
+    CSS JS FUNCTION
+*/
+.blk{
+ background-color: black;
+}
+
+.s2{
+    background-color: black;
+    border-bottom: 3px solid whitesmoke;
+    width: 100%;
+    height: 100vh;
+}
+
+.s3hd{
+    font-size: 4vw;
+    font-family:sans-serif, Arial, Helvetica;
+    color: whitesmoke;
+}
+
+.lable-con{
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 10%;
+    position: relative;
+    bottom: 25%;
+    }
+    
+.lable-cond{
+    width: 12%;
+    height: 100%;
+    position: relative;
+    left: 7.5%;
+    color: whitesmoke;
+    font-size: 1.5vw;
+    font-family: sans-serif, Arial, Helvetica;
+    }
+
+ .Se2{
+    background-color: transparent;
+     width: 100%;
+     height: 80vh;
+ }
+}    
+    </style>
+    
+    <script>
+        /*
+        JS FUNCTION For Dark Mode
+        */
+function theme()
+    {
+        document.querySelector('body').classList.toggle('blk')
+        document.querySelector('section').classList.toggle('Se2')
+        document.querySelector('h4').classList.toggle('s3hd')
+        document.querySelector('#lable-con').classList.toggle('lable-con')
+        document.querySelector('.dv1').classList.toggle('lable-cond')
+        document.querySelector('.dv2').classList.toggle('lable-cond')
+        document.querySelector('.dv3').classList.toggle('lable-cond')
+        document.querySelector('.dv4').classList.toggle('lable-cond')
+        document.querySelector('footer').classList.toggle('foot')
+    }
+    </script>
+</head>
+
+
+<body>
+    <section id="Sec1">
+        <nav>
+            <div id="Logo-Container">
+                <a href="index.html"><img src="./Images/HOMEPAGE/Brand/LOGO.png" class="logo"></a>
+            </div>
+            <a href="collections.html" class="al">COLLECTIONS</a>
+            <a href="sale.html" class="al">SALE</a>
+            <a href="newarrivals.html" class="al">NEW ARRIVALS</a>
+            <a href="lanyards.html" class="al">LANYARDS</a>
+            <a href="bags.html" class="al">BAGS</a>
+            <a href="store.html" class="al">STORE</a>
+            <a href="aboutus.html" class="al">ABOUT US</a>
+            <input type="button" value="🌙" class="themebtn" onclick="theme()">
+        </nav>
+
+        <div id="video-Container">
+        
+          <div class="vid-frame">
+            <video src="./Images/HOMEPAGE/VIDEO/slvid.mp4" class="vid" autoplay loop controls></video>
+          </div>
+          
+        </div>
+    </section>
+
+    <section id="Sec2">
+        <div class="img">
+        <img src="./Images/HOMEPAGE/CLICKABLES/Pic1.png" usemap="#image_map" class="pic1">
+        <map name="image_map">
+        <area href="https://shopee.ph/divisiondesigns?categoryId=100638&entryPoint=ShopByPDP&itemId=23779079474&upstream=search" coords="0,-1,1077,1273" shape="rect">
+        </map>
+        
+        <img src="./Images/HOMEPAGE/CLICKABLES/Pic2.png" usemap="#image_map" class="pic2">
+        <map name="image_map">
+        <area href="https://shopee.ph/divisiondesigns?categoryId=100638&entryPoint=ShopByPDP&itemId=23779079474&upstream=search" coords="0,-1,1077,1273" shape="rect">
+        </map>
+
+        <img src="./Images/HOMEPAGE/CLICKABLES/Pic3.png" usemap="#image_map" class="pic3">
+        <map name="image_map">
+        <area href="https://shopee.ph/divisiondesigns?categoryId=100638&entryPoint=ShopByPDP&itemId=23779079474&upstream=search" coords="0,-1,1077,1273" shape="rect">
+        </map>
+
+        <img src="./Images/HOMEPAGE/CLICKABLES/Pic4.png" usemap="#image_map" class="pic4">
+        <map name="image_map">
+        <area href="https://shopee.ph/divisiondesigns?categoryId=100638&entryPoint=ShopByPDP&itemId=23779079474&upstream=search" coords="0,-1,1077,1273" shape="rect">
+        </map>
+        </div>
+
+        <div id="lable-con">
+            <div class="dv1"><label>DESIGN 1</label></div>
+            <div class="dv2"><label>DESIGN 2</label></div>
+            <div class="dv3"><label>DESIGN 3</label></div>
+            <div class="dv4"><label>DESIGN 4</label></div>
+        </div>
+    </section>
+
+
+    <section id="Sec3">
+        <div id="Sec3hd"><h4 id="ighd">FIND US ON INSTAGRAM</h4></div>
+        <div id="Sec3img">
+        <img src="./Images/HOMEPAGE/Insta/pic1.png" usemap="#image_map4" class="insta1">
+        <img src="./Images/HOMEPAGE/Insta/pic2.png" usemap="#image_map4" class="insta2">
+        <img src="./Images/HOMEPAGE/Insta/pic3.png" usemap="#image_map4" class="insta3">
+        <img src="./Images/HOMEPAGE/Insta/pic4.png" usemap="#image_map4" class="insta4">
+            <map name="image_map4">
+                <area href="https://www.instagram.com/p/C2mYZONhfjc/?fbclid=IwAR3r5F1hLOEw6BBQ9U5emvnQkqtlhoT0HRFlUpsvIrwOYxYko9a2AwyIuHc" coords="0,-1,1077,1273" shape ="rect">
+            </map>
+        </div>
+    </section>
+
+    <section id="footer"> 
+        <div id="d1">
+            <img src="./Images/HOMEPAGE/Brand/D.png" class="lg">
+        </div>
+
+        <div id="d2">
+            <h1 class="fthead">DEVELOPERS</h1>
+            <p>YVES DELA CRUZ</p>
+            <p>KARL FALCULAN</p>
+            <p>EVAN VINCENT LIM</p>
+        </div>
+
+        <div id="d3"> 
+            <p>LUIS ARNOLD RESPCIO</p>
+            <p>DYLAN SALAZAR</p>
+            <p>DANIEL SANTILLAN</p>
+        </div>
+    </section>
+
+</body>
+</html>

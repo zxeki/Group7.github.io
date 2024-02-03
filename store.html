@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    }
+
+    body{
+        background-color: whitesmoke;
+    }
+
+    /*
+        CSS NAV AND SECTION 1
+    */
+    #Sec1{
+        width: 100%;
+        height: 100vh;
+        background-color: transparent;
+    }
+
+    nav{
+        background-color: whitesmoke;
+        border-bottom: solid 0.5vh black;
+        width: 100%;
+        height: 13vh;
+        display: flex;
+        flex-direction: row;
+        gap: 2%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #Logo-Container{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 10%;
+    }
+
+    .logo{
+        width: 100%;
+    }
+
+    .al{
+        text-decoration: none;
+        color: black;
+        font-family: sans-serif, Arial, Helvetica;
+        font-size: 1vw;
+    }
+
+    .al:hover{
+        text-decoration: none;
+        color: black;
+        font-family: sans-serif, Arial, Helvetica;
+        font-size: 1.8vh;
+        padding: 0.2%;
+        border-bottom: solid black 0.5vh;
+        transition: 0.5s;
+        
+    }
+
+    .themebtn{
+        background-color: transparent;
+        border: 0;
+        font-family: sans-serif, Arial, Helvetica;
+        font-size: 1.8vh;
+    }
+
+    .themebtn:hover{
+        text-decoration: none;
+        color: black;
+        font-family: sans-serif, Arial, Helvetica;
+        font-size: 1.1vw;
+        transition: 0.5s;
+    }
+
+    /*
+        CSS FOR SEC 1 THE video
+    */
+    #video-Container{
+        width: 100%;
+        height: 87vh;
+        background-color: transparent;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .vid-frame{
+        width: 100%;
+        height: 62vh;
+        background-color: transparent;
+        position: relative;
+        top: 7%;
+    }
+
+    .imagebg{
+        width: 100%;
+        height: 62vh;
+    }
+
+    /*
+        CSS FOR SEC 2
+    */
+    #Sec2{
+        width: 100%;
+        height: 100vh;
+        background-color: transparent;
+    }
+
+    #img-con{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content:space-evenly;
+        overflow: hidden;
+        gap:3.5%;
+        background-color: transparent;
+    }
+
+    .s2d1{
+        height: 75vh;
+        width: 30%;
+        overflow: hidden;
+    }
+
+    .s2d2{
+        height: 75vh;
+        width: 30%;
+        overflow: hidden;
+    }
+
+    .picleft{
+        width: 100%;
+        height: 100%;
+    }
+
+    .picright{
+        width: 100%;
+        height: 100%;
+    }
+
+    .picleft:hover{
+        width: 100%;
+        height: 100%;
+        scale: 1.2;
+        transition: 2s;
+    }
+
+    /*
+        CSS FOR SEC 2 JS
+    */
+    .lblright{
+    display: none;
+    }
+
+    .s2a{
+        font-size: 2vw;
+        text-decoration: none;
+        background-color: black;
+        color: whitesmoke;
+        border-radius: 50px;
+        padding: 5%;
+    }
+
+    .lblcon2{
+        font-size: 4.5vw;
+    }
+
+    /*
+        CSS FOR SEC 2 hr
+    */
+
+    hr{
+        width: 50%;
+        border: 2px  solid  black;
+        position: relative;
+        left: 25%;
+    }
+
+    /*
+        CSS FOR SEC 3
+    */
+    #Sec3{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+        background-color: transparent;
+    }
+
+    .s3left{
+        width: 50%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: transparent;
+    }
+
+    .back{
+        width: 50%;
+        height: 85%;
+        position: relative;
+        top: 10%;
+        right: 15%;
+        overflow: hidden;
+        scale: 1.2;
+    }
+
+    .front{
+        width: 50%;
+        height: 85%;
+        position: relative;
+        bottom: 10%;
+        left: 15%;
+        overflow: hidden;
+        scale: 1.2;
+    }
+
+    .backpic{
+        width: 100%;
+        height: 100%;
+    }
+
+
+    .frontpic{
+        width: 100%;
+        height: 100%;
+    }
+
+    .s3right{
+        width: 50%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        gap: 5%;
+        background-color: transparent;
+    }
+
+    .s3hd{
+        font-size: 4.5vw;
+        margin-top: 10%;
+    }
+
+    .s3p{
+        font-size: 2vw;
+        text-align: center;
+    }
+
+    .s3bot{
+        font-size: 2vw;
+        text-align: center;
+        text-decoration: none;
+        background-color: black;
+        color: whitesmoke;
+        border-radius: 50px;
+        padding: 3%;
+        position: relative;
+        bottom: 2%;
+    }
+
+    .s3bot:hover{
+        font-size: 2vw;
+        text-align: center;
+        text-decoration: none;
+        background-color: black;
+        color: whitesmoke;
+        border-radius: 50px;
+        padding: 3%;
+        position: relative;
+        bottom: 3%;
+        transition: 1s;
+        transition: 1s;
+        box-shadow: 0px 8px rgba(46, 46, 46, 0.205);
+    }
+
+    /*
+        CSS FOR SEC 4
+    */
+    #Sec4{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+        background-color: transparent;
+    }
+
+    .s4left{
+        width: 50%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        gap: 5%;
+        background-color: transparent;
+    }
+
+    .s4hd{
+        font-size: 4.5vw;
+        margin-top: 10%;
+    }
+
+    .s4p{
+        font-size: 2vw;
+        text-align: center;
+    }
+
+    .s4bot{
+        font-size: 2vw;
+        text-align: center;
+        text-decoration: none;
+        background-color: black;
+        color: whitesmoke;
+        border-radius: 50px;
+        padding: 3%;
+        position: relative;
+        bottom: 2%;
+    }
+
+    .s4bot:hover{
+        font-size: 2vw;
+        text-align: center;
+        text-decoration: none;
+        background-color: black;
+        color: whitesmoke;
+        border-radius: 50px;
+        padding: 3%;
+        position: relative;
+        bottom: 3%;
+        transition: 1s;
+        box-shadow: 0px 8px rgba(46, 46, 46, 0.205);
+    }
+
+    .s4right{
+        width: 50%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: transparent;
+    }
+
+    .s4back{
+        border: solid 3px black;
+        width: 40%;
+        height: 95%;
+        position: relative;
+        top: 10%;
+        right: 15%;
+        overflow: hidden;
+        scale: 1.2;
+    }
+
+    .s4front{
+        border: solid 3px black;
+        width: 40%;
+        height: 95%;
+        position: relative;
+        bottom: 8%;
+        left: 20%;
+        overflow: hidden;
+        scale: 1.2;
+    }
+
+    .s4backpic{
+        width: 100%;
+        height: 100%;
+    }
+
+
+    .s4frontpic{
+        width: 100%;
+        height: 100%;
+    }
+
+    /*
+        CSS FOR FOOTER
+    */
+
+    #footer{
+        margin-bottom: 0%;
+        width: 100%;
+        height: 15vh;
+        background-color: gainsboro;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #d1{
+        width: 20%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .lg{
+        width: 40%;
+    }
+
+    #d2{
+        width: 20%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4%;
+    }
+
+    #d2 p{
+        font-size: 1vw;
+        font-family: sans-serif, Arial, Helvetica; 
+    }
+
+    .fthead{
+        font-size: 1.3vw;
+        font-family: sans-serif, Arial, Helvetica; 
+    }
+
+    #d3{
+        width: 20%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4%;
+    }
+
+    #d3 p{
+        font-family: sans-serif, Arial, Helvetica; 
+        font-size: 1vw;
+        position: relative;
+        top: 10%;   
+    }
+
+    /*
+        CSS FOR JS Function
+    */
+    .lbright{
+        height: 65%;
+        width: 30%;
+        color: whitesmoke;
+        background-color: rgba(0, 0, 0, 0.651);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content:center;
+        gap: 13%;
+        position: relative;
+        bottom: 77.5%;
+        left: 57.9%;
+    }
+
+    .whole{
+        background-color: black;
+    }
+
+    .s3r{
+        width: 50%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        gap: 5%;
+        background-color: transparent;
+    }
+
+    .s3h{
+        font-size: 4.5vw;
+        margin-top: 10%;
+        color: whitesmoke;
+    }
+
+    .s3ph{
+        font-size: 2vw;
+        text-align: center;
+        color: whitesmoke;
+    }
+
+    .s3bt{
+        font-size: 2vw;
+        text-align: center;
+        text-decoration: none;
+        background-color: whitesmoke;
+        color: black;
+        border-radius: 50px;
+        padding: 3%;
+        position: relative;
+        bottom: 2%;
+    }
+
+    .s4l{
+        width: 50%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        gap: 5%;
+        background-color: transparent;
+    }
+
+    .s4h{
+        font-size: 4.5vw;
+        margin-top: 10%;
+        color: whitesmoke;
+    }
+
+    .s4ph{
+        font-size: 2vw;
+        text-align: center;
+        color: whitesmoke;
+    }
+
+    .s4bt{
+        font-size: 2vw;
+        text-align: center;
+        text-decoration: none;
+        background-color: whitesmoke;
+        color: black;
+        border-radius: 50px;
+        padding: 3%;
+        position: relative;
+        bottom: 2%;
+    }
+
+    @media only screen and (max-width: 800px){
+    *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    }
+
+    body{
+        background-color: whitesmoke;
+    }
+
+    /*
+        CSS NAV AND SECTION 1
+    */
+    #Sec1{
+        width: 100%;
+        height: 70vh;
+        background-color: transparent;
+    }
+
+    nav{
+        background-color: whitesmoke;
+        border-bottom: solid 0.5vh black;
+        width: 100%;
+        height: 10vh;
+        display: flex;
+        flex-direction: row;
+        gap: 2%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #Logo-Container{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 25%;
+    }
+
+    .logo{
+        width: 100%;
+    }
+
+    .al{
+        text-decoration: none;
+        color: black;
+        font-family: sans-serif, Arial, Helvetica;
+        font-size: 1.5vw;
+    }
+
+    .al:hover{
+        text-decoration: none;
+        color: black;
+        font-family: sans-serif, Arial, Helvetica;
+        font-size: 1.8vh;
+        padding: 0.2%;
+        border-bottom: solid black 0.5vh;
+        transition: 0.5s;
+        
+    }
+
+    .themebtn{
+        background-color: transparent;
+        border: 0;
+        font-family: sans-serif, Arial, Helvetica;
+        font-size: 1.8vh;
+    }
+
+    .themebtn:hover{
+        text-decoration: none;
+        color: black;
+        font-family: sans-serif, Arial, Helvetica;
+        font-size: 1.1vw;
+        transition: 0.5s;
+    }
+
+    /*
+        CSS FOR SEC 1 THE video
+    */
+    #video-Container{
+        width: 100%;
+        background-color: transparent;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .vid-frame{
+        width: 100%;
+        height: 60vh;
+        background-color: transparent;
+        position: relative;
+    }
+
+    .imagebg{
+        width: 100%;
+        height: 80%;
+    }
+
+    /*
+        CSS FOR SEC 2
+    */
+    #Sec2{
+        width: 100%;
+        height: 60vh;
+        background-color: transparent;
+    }
+
+    #img-con{
+        width: 100%;
+        height: 50vh;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        overflow: hidden;
+        gap:3.5%;
+        background-color: transparent;
+    }
+
+    .s2d1{
+        height: 50vh;
+        width: 30%;
+        overflow: hidden;
+    }
+
+    .s2d2{
+        height: 50vh;
+        width: 30%;
+        overflow: hidden;
+    }
+
+    .picleft{
+        width: 100%;
+        height: 100%;
+    }
+
+    .picright{
+        width: 100%;
+        height: 100%;
+    }
+
+    .picleft:hover{
+        width: 100%;
+        height: 100%;
+        scale: 1.2;
+        transition: 2s;
+    }
+
+    /*
+        CSS FOR SEC 2 JS
+    */
+    .lblright{
+    display: none;
+        top: -30%;
+    }
+
+    .s2a{
+        font-size: 2vw;
+        text-decoration: none;
+        background-color: black;
+        color: whitesmoke;
+        border-radius: 50px;
+        padding: 5%;
+    }
+
+    .lblcon2{
+        font-size: 4.5vw;
+    }
+
+    /*
+        CSS FOR SEC 2 hr
+    */
+
+    hr{
+        width: 50%;
+        border: 2px  solid  black;
+        position: relative;
+        left: 25%;
+    }
+
+    /*
+        CSS FOR SEC 3
+    */
+    #Sec3{
+        width: 100%;
+        height: 60vh;
+        display: flex;
+        flex-direction: row;
+        background-color: transparent;
+    }
+
+    .s3left{
+        width: 80%;
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: transparent;
+    }
+
+    .back{
+        position: relative;
+        top: 10%;
+        right: 15%;
+        overflow: hidden;
+        scale: 1.2;
+    }
+
+    .front{
+        position: relative;
+        bottom: 30%;
+        left: 5%;
+        overflow: hidden;
+        scale: 1.2;
+    }
+
+    .backpic{
+        width: 70%;
+        height: 90%;
+    }
+
+
+    .frontpic{
+        width: 70%;
+        height: 90%;
+    }
+
+    .s3right{
+        width: 50%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        gap: 5%;
+        background-color: transparent;
+    }
+
+    .s3hd{
+        font-size: 4.5vw;
+        margin-top: 10%;
+    }
+
+    .s3p{
+        font-size: 2vw;
+        text-align: center;
+    }
+
+    .s3bot{
+        font-size: 2vw;
+        text-align: center;
+        text-decoration: none;
+        background-color: black;
+        color: whitesmoke;
+        border-radius: 50px;
+        padding: 3%;
+        position: relative;
+        bottom: 2%;
+    }
+
+    .s3bot:hover{
+        font-size: 2vw;
+        text-align: center;
+        text-decoration: none;
+        background-color: black;
+        color: whitesmoke;
+        border-radius: 50px;
+        padding: 3%;
+        position: relative;
+        bottom: 3%;
+        transition: 1s;
+        transition: 1s;
+        box-shadow: 0px 8px rgba(46, 46, 46, 0.205);
+    }
+
+    /*
+        CSS FOR SEC 4
+    */
+    #Sec4{
+        width: 100%;
+        height: 80vh;
+        display: flex;
+        flex-direction: row;
+        background-color: transparent;
+    }
+
+    .s4left{
+        width: 50%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        gap: 5%;
+        background-color: transparent;
+    }
+
+    .s4hd{
+        font-size: 4.5vw;
+        margin-top: 10%;
+    }
+
+    .s4p{
+        font-size: 2vw;
+        text-align: center;
+    }
+
+    .s4bot{
+        font-size: 2vw;
+        text-align: center;
+        text-decoration: none;
+        background-color: black;
+        color: whitesmoke;
+        border-radius: 50px;
+        padding: 3%;
+        position: relative;
+        bottom: 2%;
+    }
+
+    .s4bot:hover{
+        font-size: 2vw;
+        text-align: center;
+        text-decoration: none;
+        background-color: black;
+        color: whitesmoke;
+        border-radius: 50px;
+        padding: 3%;
+        position: relative;
+        bottom: 3%;
+        transition: 1s;
+        box-shadow: 0px 8px rgba(46, 46, 46, 0.205);
+    }
+
+    .s4right{
+        width: 50%;
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: transparent;
+    }
+
+    .s4back{
+        border: solid 3px black;
+        width: 40%;
+        height: 95%;
+        position: relative;
+        top: 10%;
+        right: 15%;
+        overflow: hidden;
+        scale: 1.2;
+    }
+
+    .s4front{
+        border: solid 3px black;
+        width: 40%;
+        height: 95%;
+        position: relative;
+        bottom: 20%;
+        left: 5%;
+        overflow: hidden;
+        scale: 1.2;
+    }
+
+    .s4backpic{
+        width: 100%;
+        height: 100%;
+    }
+
+
+    .s4frontpic{
+        width: 100%;
+        height: 100%;
+    }
+
+    /*
+        CSS FOR FOOTER
+    */
+
+    #footer{
+        width: 100%;
+        height: 15vh;
+        background-color: gainsboro;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 0%;
+    }
+
+    #d1{
+        width: 40%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .lg{
+        width: 40%;
+    }
+
+    #d2{
+        width: 20%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4%;
+    }
+
+    #d2 h1 {
+        font-size: 2vw;
+    }
+    
+    #d2 p{
+        font-size: 1.5vw;
+        font-family: sans-serif, Arial, Helvetica; 
+    }
+
+    .fthead{
+        font-size: 1.3vw;
+        font-family: sans-serif, Arial, Helvetica; 
+    }
+
+    #d3{
+        width: 20%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4%;
+    }
+
+    #d3 p{
+        font-family: sans-serif, Arial, Helvetica; 
+        font-size: 1.5vw;
+        position: relative;
+        top: 10%;   
+    }
+
+    /*
+        CSS FOR JS Function
+    */
+    .lbright{
+        height: 30%;
+        width: 30%;
+        color: whitesmoke;
+        background-color: rgba(0, 0, 0, 0.651);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content:center;
+        gap: 13%;
+        position: relative;
+        bottom: 77.5%;
+        left: 57.9%;
+    }
+
+    .whole{
+        background-color: black;
+    }
+
+    .s3r{
+        width: 50%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        gap: 5%;
+        background-color: transparent;
+    }
+
+    .s3h{
+        font-size: 4.5vw;
+        margin-top: 10%;
+        color: whitesmoke;
+    }
+
+    .s3ph{
+        font-size: 2vw;
+        text-align: center;
+        color: whitesmoke;
+    }
+
+    .s3bt{
+        font-size: 2vw;
+        text-align: center;
+        text-decoration: none;
+        background-color: whitesmoke;
+        color: black;
+        border-radius: 50px;
+        padding: 3%;
+        position: relative;
+        bottom: 2%;
+    }
+
+    .s4l{
+        width: 50%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        gap: 5%;
+        background-color: transparent;
+    }
+
+    .s4h{
+        font-size: 4.5vw;
+        margin-top: 10%;
+        color: whitesmoke;
+    }
+
+    .s4ph{
+        font-size: 2vw;
+        text-align: center;
+        color: whitesmoke;
+    }
+
+    .s4bt{
+        font-size: 2vw;
+        text-align: center;
+        text-decoration: none;
+        background-color: whitesmoke;
+        color: black;
+        border-radius: 50px;
+        padding: 3%;
+        position: relative;
+        bottom: 2%;
+    }
+}    
+        
+    </style>
+    <script>
+        function hoverright()
+        {
+            document.querySelector('.lblright').classList.toggle('lbright')
+        }
+
+        function storedk()
+        {
+            document.querySelector('body').classList.toggle('whole')
+
+            document.querySelector('.s3right').classList.toggle('s3r')
+            document.querySelector('.s3hd').classList.toggle('s3h')
+            document.querySelector('.s3p').classList.toggle('s3ph')
+            document.querySelector('.s3bot').classList.toggle('s3bt')
+
+            document.querySelector('.s4right').classList.toggle('s4l')
+            document.querySelector('.s4hd').classList.toggle('s4h')
+            document.querySelector('.s4p').classList.toggle('s4ph')
+            document.querySelector('.s4bot').classList.toggle('s4bt')
+        }
+    </script>
+</head>
+<body>
+    
+    <section id="Sec1">
+        <nav>
+            <div id="Logo-Container">
+                <a href="index.html"><img src="./Images/HOMEPAGE/Brand/LOGO.png" class="logo"></a>
+            </div>
+            <a href="collections.html" class="al">COLLECTIONS</a>
+            <a href="sale.html" class="al">SALE</a>
+            <a href="newarrivals.html" class="al">NEW ARRIVALS</a>
+            <a href="lanyards.html" class="al">LANYARDS</a>
+            <a href="bags.html" class="al">BAGS</a>
+            <a href="store.html" class="al">STORE</a>
+            <a href="aboutus.html" class="al">ABOUT US</a>
+            <input type="button" value="🌙" class="themebtn" onclick="storedk()">
+        </nav>
+
+        <div id="video-Container">
+            <div class="vid-frame">
+              <img src="./Images/STORE_PAGE/SEC1/STORE-BACKGROUND.png" class="imagebg">
+            </div>
+        </div>
+    </section>
+
+    <section id="Sec2">
+        <div id="img-con">
+        <div class="s2d1"><img src="./Images/STORE_PAGE/SEC2/leftimg.png" class="picleft"></div>
+        <div class="s2d2"><img src="./Images/STORE_PAGE/SEC2/rightimg.png" class="picright" onmouseover="hoverright()"></div>
+        </div>
+        <div class="lblright"><label class="lblcon2">LANYARDS</label><a href="newarrivals.html" class="s2a">SHOW NOW</a></div>
+    </section>
+
+    <hr>
+
+    <section id="Sec3">
+        <div class="s3left">
+            <div class="back"><img src="./Images/STORE_PAGE/SEC3/imgback.png" class="backpic"></div>
+            <div class="front"><img src="./Images/STORE_PAGE/SEC3/imgfront.jpeg" class="frontpic"></div>
+        </div>
+
+        <div class="s3right">
+            <h1 class="s3hd">New Arrivals</h1>
+            <p class="s3p">Explore our vibrant new items,
+            <br>blending today's world with Mapua
+            <br>pride for a dynamic experience
+            </p>
+            <a href="newarrivals.html" class="s3bot">New Arrivals</a>
+        </div>
+    </section>
+
+    <section id="Sec4">
+        <div class="s4left">
+            <h1 class="s4hd">EXPRESS YOURSELF</h1>
+            <p class="s4p">We Showcase the Mapuan Identity
+            <br>That can't be found anywhere. To be
+            <br>always on-trend, new items are
+            <br>added to our collection.
+            </p>
+            <a href="collections.html" class="s4bot">COLLECTIONS</a>
+        </div>
+
+        <div class="s4right">
+            <div class="s4back"><img src="./Images/STORE_PAGE/SEC4/lanyardback.png" class="s4backpic"></div>
+            <div class="s4front"><img src="./Images/STORE_PAGE/SEC4/lanyardfront.png" class="s4frontpic"></div>
+        </div>
+    </section>
+
+    <section id="footer"> 
+        <div id="d1">
+            <img src="./Images/HOMEPAGE/Brand/D.png" class="lg">
+        </div>
+
+        <div id="d2">
+            <h1 class="fthead">DEVELOPERS</h1>
+            <p>YVES DELA CRUZ</p>
+            <p>KARL FALCULAN</p>
+            <p>EVAN VINCENT LIM</p>
+        </div>
+
+        <div id="d3"> 
+            <p>LUIS ARNOLD RESPCIO</p>
+            <p>DYLAN SALAZAR</p>
+            <p>DANIEL SANTILLAN</p>
+        </div>
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collections</title>
+<style>
+    *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    }
+
+    body{
+        background-color: whitesmoke;
+    }
+
+    /*
+        CSS NAV AND SECTION 1
+    */
+    #Sec1{
+        width: 100%;
+        height: 100vh;
+        background-color: transparent;
+    }
+
+    nav{
+        background-color: whitesmoke;
+        border-bottom: solid 0.5vh black;
+        width: 100%;
+        height: 13vh;
+        display: flex;
+        flex-direction: row;
+        gap: 2%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #Logo-Container{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 10%;
+    }
+
+    .logo{
+        width: 100%;
+    }
+
+    .al{
+        text-decoration: none;
+        color: black;
+        font-family: sans-serif, Arial, Helvetica;
+        font-size: 1vw;
+    }
+
+    .al:hover{
+        text-decoration: none;
+        color: black;
+        font-family: sans-serif, Arial, Helvetica;
+        font-size: 1.8vh;
+        padding: 0.2%;
+        border-bottom: solid black 0.5vh;
+        transition: 0.5s;
+    }
+
+    .themebtn{
+        background-color: whitesmoke;
+        border: 0;
+        font-family: sans-serif, Arial, Helvetica;
+        font-size: 1.8vh;
+    }
+
+    .themebtn:hover{
+        text-decoration: none;
+        color: black;
+        font-family: sans-serif, Arial, Helvetica;
+        font-size: 1.1vw;
+        transition: 0.5s;
+    }
+
+    /*
+        CSS FOR SEC 1 THE VIDEO 
+    */
+
+    #VidContainer{
+        width: 100%;
+        height: 87vh;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+    }
+
+    .vid-frame{
+        width: 100%;
+        height: 70vh;
+        margin-bottom: 3.5%;
+    }
+
+    .imghd{
+        width: 100%;
+        height: 100%;
+    }
+
+    /*
+        CSS FOR SEC 2.1
+    */
+
+    #Sec2{
+        background-color: transparent;
+        width: 100%;
+        height: 200vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .imgcontainer{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+        gap: 10%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .d1, .d2, .d3{
+        margin-bottom: 5%;
+        width: 20%;
+        height: 75%;
+        display: flex;
+        background-color: transparent;
+        overflow: hidden;
+    }
+
+    .l1, .l2, .l3{
+        margin-bottom: 10%;
+        width: 100%;
+        height: 100%;
+    }
+
+    .l1:hover, .l2:hover, .l3:hover{
+        scale: 1.1;
+        transition: 2s all;
+    }
+
+    .d1:hover, .d2:hover, .d3:hover{
+        transition: 2s all;
+        box-shadow: 10px 10px rgba(46, 46, 46, 0.205);
+    }
+
+    .lbcontainer{
+        height: 0vh;
+        display: flex;
+        gap: 20%;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        bottom:6%;
+    }
+
+    label{
+        font-size: 1.3vw;
+    }
+
+    .lbl1{
+        position: relative;
+        left: 20%;
+    }
+
+    .lbl2{
+        position: relative;
+        right: 45%;
+    }
+
+    .lbl3{
+        position: relative;
+        right: 50%;
+    }
+
+    /*
+        CSS FOR SEC 2.2
+    */
+    .imgcontainer2{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+        gap: 10%;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+    }
+
+    .d4, .d5, .d6{
+        margin-bottom: 5%;
+        width: 25%;
+        height: 50%;
+        display: flex;
+        background-color: white;
+        overflow: hidden;
+    }
+
+    .d4:hover, .d5:hover, .d6:hover{
+        transition: 2s all;
+        box-shadow: 10px 10px rgba(46, 46, 46, 0.205);
+    }
+
+    .l4, .l5, .l6{
+        margin-bottom: 10%;
+        width: 100%;
+        height: 100%;
+    }
+
+    .l4:hover, .l5:hover, .l6:hover{
+        scale: 1.1;
+        transition: 2s all;
+    }
+
+    .lbcontainer2{
+        height: 0vh;
+        display: flex;
+        gap: 20%;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        bottom:13%;
+    }
+
+    label{
+        font-size: 1.3vw;
+    }
+
+    .lbl4{
+        position: relative;
+        right: 188%;
+    }
+
+    .lbl5{
+        position: relative;
+        right: 45%;
+    }
+
+    .lbl6{
+        position: relative;
+        right: 5%;
+    }
+
+    /*
+        CSS FOR FOOTER
+    */
+    #footer{
+        width: 100%;
+        height: 15vh;
+        background-color: gainsboro;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #d1{
+        width: 20%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .lg{
+        width: 40%;
+    }
+
+    #d2{
+        width: 20%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4%;
+    }
+
+    #d2 p{
+        font-size: 1vw;
+        font-family: sans-serif, Arial, Helvetica; 
+    }
+
+    .fthead{
+        font-size: 1.3vw;
+        font-family: sans-serif, Arial, Helvetica; 
+    }
+
+    #d3{
+        width: 20%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4%;
+    }
+
+    #d3 p{
+        font-family: sans-serif, Arial, Helvetica; 
+        font-size: 1vw;
+        position: relative;
+        top: 10%;   
+    }
+
+    /*
+        CSS FOR JS FUNCTION
+    */
+
+    .blk{
+        background-color: black;
+    }
+
+    .lbl1color{
+        color: whitesmoke;
+        font-size: 1.3vw;
+        position: relative;
+        left: 20%;
+    }
+
+    .lbl2color{
+        color: whitesmoke;
+        font-size: 1.3vw;
+        position: relative;
+        right: 45%;
+    }
+
+    .lbl3color{
+        color: whitesmoke;
+        font-size: 1.3vw;
+        position: relative;
+        right: 50%;
+    }
+
+    .lbl4color{
+        color: whitesmoke;
+        font-size: 1.3vw;
+        position: relative;
+        right: 188%;
+    }
+
+    .lbl5color{
+        color: whitesmoke;
+        font-size: 1.3vw;
+        position: relative;
+        right: 45%;
+    }
+
+    .lbl6color{
+        color: whitesmoke;
+        font-size: 1.3vw;
+        position: relative;
+        right: 5%;
+    }
+    
+    @media only screen and (max-width: 800px){
+    *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    }
+
+    body{
+        background-color: whitesmoke;
+    }
+
+    /*
+        CSS NAV AND SECTION 1
+    */
+    #Sec1{
+        width: 100%;
+        height: 70vh;
+        background-color: transparent;
+    }
+
+    nav{
+        background-color: whitesmoke;
+        border-bottom: solid 0.5vh black;
+        width: 100%;
+        height: 10vh;
+        display: flex;
+        flex-direction: row;
+        gap: 2%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #Logo-Container{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 25%;
+    }
+
+    .logo{
+        width: 100%;
+    }
+
+    .al{
+        text-decoration: none;
+        color: black;
+        font-family: sans-serif, Arial, Helvetica;
+        font-size: 1.5vw;
+    }
+
+    .al:hover{
+        text-decoration: none;
+        color: black;
+        font-family: sans-serif, Arial, Helvetica;
+        font-size: 1.8vh;
+        padding: 0.2%;
+        border-bottom: solid black 0.5vh;
+        transition: 0.5s;
+    }
+
+    .themebtn{
+        background-color: whitesmoke;
+        border: 0;
+        font-family: sans-serif, Arial, Helvetica;
+        font-size: 1.8vh;
+    }
+
+    .themebtn:hover{
+        text-decoration: none;
+        color: black;
+        font-family: sans-serif, Arial, Helvetica;
+        font-size: 1.1vw;
+        transition: 0.5s;
+    }
+
+    /*
+        CSS FOR SEC 1 THE VIDEO 
+    */
+
+    #VidContainer{
+        width: 100%;
+        background-color: transparent;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .vid-frame{
+        width: 100%;
+        height: 60vh;
+    }
+
+    .imghd{
+        width: 100%;
+        height: 80%;
+    }
+
+    /*
+        CSS FOR SEC 2.1
+    */
+
+    #Sec2{
+        background-color: transparent;
+        width: 100%;
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .imgcontainer{
+        width: 100%;
+        height: 50vh;
+        display: flex;
+        flex-direction: row;
+        gap: 10%;
+        justify-content: center;
+    }
+
+    .d1, .d2, .d3{
+        width: 20%;
+        height: 80%;
+        display: flex;
+        background-color: transparent;
+        overflow: hidden;
+    }
+
+    .l1, .l2, .l3{
+        width: 100%;
+        height: 100%;
+    }
+
+    .l1:hover, .l2:hover, .l3:hover{
+        scale: 1.1;
+        transition: 2s all;
+    }
+
+    .d1:hover, .d2:hover, .d3:hover{
+        transition: 2s all;
+        box-shadow: 10px 10px rgba(46, 46, 46, 0.205);
+    }
+
+    .lbcontainer{
+        height: 0vh;
+        display: flex;
+        gap: 20%;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        bottom:6%;
+    }
+
+    label{
+        font-size: 1.3vw;
+    }
+
+    .lbl1{
+        position: relative;
+        left: 20%;
+    }
+
+    .lbl2{
+        position: relative;
+        right: 45%;
+    }
+
+    .lbl3{
+        position: relative;
+        right: 50%;
+    }
+
+    /*
+        CSS FOR SEC 2.2
+    */
+    .imgcontainer2{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+        gap: 10%;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+    }
+
+    .d4, .d5, .d6{
+        margin-bottom: 5%;
+        width: 20%;
+        height: 60%;
+        display: flex;
+        background-color: white;
+        overflow: hidden;
+    }
+
+    .d4:hover, .d5:hover, .d6:hover{
+        transition: 2s all;
+        box-shadow: 10px 10px rgba(46, 46, 46, 0.205);
+    }
+
+    .l4, .l5, .l6{;
+        width: 100%;
+        height: 100%;
+    }
+
+    .l4:hover, .l5:hover, .l6:hover{
+        scale: 1.1;
+        transition: 2s all;
+    }
+
+    .lbcontainer2{
+        height: 0vh;
+        display: flex;
+        gap: 20%;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        bottom: 10%;
+    }
+
+    label{
+        font-size: 1.3vw;
+    }
+
+    .lbl4{
+        position: relative;
+        right: 70%;
+    }
+
+    .lbl5{
+        position: relative;
+        right: 20%;
+    }
+
+    .lbl6{
+        position: relative;
+        right: 30%;
+    }
+
+    /*
+        CSS FOR FOOTER
+    */
+    #footer{
+        width: 100%;
+        height: 15vh;
+        background-color: gainsboro;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #d1{
+        width: 40%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .lg{
+        width: 40%;
+    }
+
+    #d2{
+        width: 20%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4%;
+    }
+
+    #d2 h1 {
+        font-size: 2vw;
+    }
+    
+    #d2 p{
+        font-size: 1.5vw;
+        font-family: sans-serif, Arial, Helvetica; 
+    }
+
+    .fthead{
+        font-size: 1.3vw;
+        font-family: sans-serif, Arial, Helvetica; 
+    }
+
+    #d3{
+        width: 20%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4%;
+    }
+
+    #d3 p{
+        font-family: sans-serif, Arial, Helvetica; 
+        font-size: 1.5vw;
+        position: relative;
+        top: 10%;   
+    }
+
+    /*
+        CSS FOR JS FUNCTION
+    */
+
+    .blk{
+        background-color: black;
+    }
+
+    .lbl1color{
+        color: whitesmoke;
+        font-size: 1.3vw;
+        position: relative;
+        left: 20%;
+    }
+
+    .lbl2color{
+        color: whitesmoke;
+        font-size: 1.3vw;
+        position: relative;
+        right: 45%;
+    }
+
+    .lbl3color{
+        color: whitesmoke;
+        font-size: 1.3vw;
+        position: relative;
+        right: 50%;
+    }
+
+    .lbl4color{
+        color: whitesmoke;
+        font-size: 1.3vw;
+        position: relative;
+        right: 188%;
+    }
+
+    .lbl5color{
+        color: whitesmoke;
+        font-size: 1.3vw;
+        position: relative;
+        right: 45%;
+    }
+
+    .lbl6color{
+        color: whitesmoke;
+        font-size: 1.3vw;
+        position: relative;
+        right: 5%;
+    }
+}
+</style>
+
+<script>
+        function CLTtheme()
+    {
+        document.querySelector('body').classList.toggle('blk')
+        document.querySelector('.lbl1').classList.toggle('lbl1color')
+        document.querySelector('.lbl2').classList.toggle('lbl2color')
+        document.querySelector('.lbl3').classList.toggle('lbl3color')
+        document.querySelector('.lbl4').classList.toggle('lbl4color')
+        document.querySelector('.lbl5').classList.toggle('lbl5color')
+        document.querySelector('.lbl6').classList.toggle('lbl6color')
+    }
+</script>
+
+</head>
+<body>
+    <section id="Sec1">
+        <nav>
+            <div id="Logo-Container">
+                <a href="index.html"><img src="./Images/HOMEPAGE/Brand/LOGO.png" class="logo"></a>
+            </div>
+            <a href="collections.html" class="al">COLLECTIONS</a>
+            <a href="sale.html" class="al">SALE</a>
+            <a href="newarrivals.html" class="al">NEW ARRIVALS</a>
+            <a href="lanyards.html" class="al">LANYARDS</a>
+            <a href="bags.html" class="al">BAGS</a>
+            <a href="store.html" class="al">STORE</a>
+            <a href="aboutus.html" class="al">ABOUT US</a>
+            <input type="button" value="🌙" class="themebtn" onclick="CLTtheme()">
+        </nav>
+
+        <div id="VidContainer">          
+          <div class="vid-frame">
+            <img src="./Images/COLLECTION_PAGE/Sec1_Images/THE COLLECTIONS.png" class="imghd">
+          </div>
+        </div>
+    </section>
+
+    <section id="Sec2">
+        <div class="imgcontainer">
+            <div class="d1"><img src="./Images/COLLECTION_PAGE/Lanyards/Lanyard1.png" class="l1"></div>
+            <div class="d2"><img src="./Images/COLLECTION_PAGE/Lanyards/Lanyard2.png" class="l2"></div>
+            <div class="d3"><img src="./Images/COLLECTION_PAGE/Lanyards/Lanyard3.png" class="l3"></div>
+        </div>
+
+        <div class="lbcontainer">
+            <b><label class="lbl1">INFORMATION TECHNOLOGY <br>-JAPANESE (REVERSIBLE)</label></b>
+            <b><label class="lbl2">PADAYON MAPUAN<br>(REVERSIBLE)</label></b>
+            <b><label class="lbl3">RED AND GOLD - MAPUA<br>(REVERSIBLE)</label></b>
+        </div>
+
+        <div class="imgcontainer2">
+            <div class="d4"><img src="./Images/COLLECTION_PAGE/Bags/Bag1.png" class="l4"></div>
+            <div class="d5"><img src="./Images/COLLECTION_PAGE/Bags/Bag2.png" class="l5"></div>
+            <div class="d6"><img src="./Images/COLLECTION_PAGE/Bags/Bag3.png" class="l6"></div>
+        </div>
+
+        <div class="lbcontainer2">
+            <b><label class="lbl4">UNO TOTE</label></b>
+            <b><label class="lbl5">CARDINAL TOTE</label></b>
+            <b><label class="lbl6">CARDIBIRD TOTE</label></b>
+        </div>
+    </section> 
+
+    <section id="footer"> 
+        <div id="d1">
+            <img src="./Images/HOMEPAGE/Brand/D.png" class="lg">
+        </div>
+
+        <div id="d2">
+            <h1 class="fthead">DEVELOPERS</h1>
+            <p>YVES DELA CRUZ</p>
+            <p>KARL FALCULAN</p>
+            <p>EVAN VINCENT LIM</p>
+        </div>
+
+        <div id="d3"> 
+            <p>LUIS ARNOLD RESPCIO</p>
+            <p>DYLAN SALAZAR</p>
+            <p>DANIEL SANTILLAN</p>
+        </div>
+    </section>
+
+</body>
+</html>

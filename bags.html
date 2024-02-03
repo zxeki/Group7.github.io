@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tote Bags</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+    /*
+        CSS NAV AND SECTION 1
+    */
+    #Sec1{
+        width: 100%;
+        height: 100vh;
+        background-color: transparent;
+    }
+
+    nav{
+        background-color: whitesmoke;
+        border-bottom: solid 0.5vh black;
+        width: 100%;
+        height: 13vh;
+        display: flex;
+        flex-direction: row;
+        gap: 2%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #Logo-Container{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 10%;
+    }
+
+    .logo{
+        width: 100%;
+    }
+
+    .al{
+        text-decoration: none;
+        color: black;
+        font-family: sans-serif, Arial, Helvetica;
+        font-size: 1vw;
+    }
+
+    .al:hover{
+        text-decoration: none;
+        color: black;
+        font-family: sans-serif, Arial, Helvetica;
+        font-size: 1.8vh;
+        padding: 0.2%;
+        border-bottom: solid black 0.5vh;
+        transition: 0.5s;
+    }
+
+    .themebtn{
+        background-color: whitesmoke;
+        border: 0;
+        font-family: sans-serif, Arial, Helvetica;
+        font-size: 1.8vh;
+    }
+
+    .themebtn:hover{
+        text-decoration: none;
+        color: black;
+        font-family: sans-serif, Arial, Helvetica;
+        font-size: 1.1vw;
+        transition: 0.5s;
+    }
+
+    /*
+        CSS FOR THE video
+    */
+    #Pic-Container{
+        width: 100%;
+        height: 87vh;
+        background-color: transparent;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Pic-frame{
+        width: 100%;
+        height: 68vh;
+        background-color: transparent;
+        position: relative;
+        top: 10%;
+    }
+
+    .Pic{
+        width: 100%;
+        height: 100%;
+        
+    }
+
+    .text{
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+        color: whitesmoke;
+        font-family: sans-serif, Arial, Helvetica;
+        font-size: 3.5vw;
+        padding: 20px;
+        border: whitesmoke solid 3px;
+        position: relative;
+        bottom: 40%;  
+    }
+
+    /*
+        CSS NAV AND SECTION 2
+    */
+    #Sec2{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        background-color: transparent;
+    }
+
+    #Nav-Filter{
+        width: 100%;
+        height: 10vh;
+        display: flex;
+        flex-direction: row;
+        border-top: 5px solid gainsboro;
+        border-bottom: 5px solid gainsboro;
+        background-color: white;
+        box-shadow: 10px 0px 10px gainsboro;
+    }
+
+    .lft{
+        width: 60%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+    }
+
+    .lft h1{
+    font-size: 1.5vw;
+    margin-left: 5%;
+    }
+
+    .rht{
+        width: 40%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        align-items: center;
+    }
+
+    .rht button{
+        font-size: 1.5vw;
+        width: 11%;
+        height: 80%;
+        margin-right: 5%;
+        border: transparent;
+    }
+
+    .rht button img{
+        font-size: 1.5vw;
+        width: 100%;
+        height: 100%;
+        margin-right: 5%;
+    }
+
+    header{
+        width: 100%;
+        height: 15vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header h1{
+        font-size: 3vw;
+    }
+
+    hr{
+        border-bottom: 3px solid black;
+        width: 60%;
+    }
+
+    #pic-cont{
+        width: 100%;
+        height: 50vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 10%;
+    }
+
+    #pic-cont div{
+        width: 25%;
+        height: 95%;
+        overflow: hidden;
+    }
+
+    #pic-cont div:hover {
+        width: 25%;
+        height: 95%;
+        overflow: hidden;
+        box-shadow: 10px 10px rgba(46, 46, 46, 0.205);
+        transition: 2s;
+    }
+
+    #pic-cont div img{
+        width: 100%;
+        height: 100%;
+    }
+
+    #pic-cont div img:hover {
+        width: 100%;
+        height: 100%;
+        scale: 1.2;
+        transition: 2s;
+        box-shadow: 10px 10px rgba(46, 46, 46, 0.205);
+    }
+
+    #label-cont{
+        width: 100%;
+        height: 15vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 20%;
+    }
+
+    #label-cont div{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+    }
+
+    #label-cont label{
+        font-size: 2vw;
+    }
+
+    .lbl1{
+        position: relative;
+        left: 50%;
+        bottom:5%;
+    }
+
+    .lbl11{
+        position: relative;
+        left:50%;
+        bottom:5%;
+        color: red;
+    }
+
+    .lbl2{
+        position: relative;
+        bottom:10%;
+        right:10vh;
+
+    }
+
+    .lbl22{
+        position: relative;
+        right:10vh;
+        bottom:5%;
+        color: red;
+    }
+
+
+    .lbl101{
+        position: relative;
+        right: 0.5%;
+    }
+
+    .lbl110{
+        position: relative;
+        left: 29%;
+        color: red;
+    }
+
+    .lbl111{
+        position: relative;
+        right: 0.5%;
+        color: red;
+    }
+
+    /*
+        CSS FOR FOOTER
+    */
+    #footer{
+        margin-bottom: 0%;
+        width: 100%;
+        height: 15vh;
+        background-color: gainsboro;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #d1{
+        width: 20%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .lg{
+        width: 40%;
+    }
+
+    #d2{
+        width: 20%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4%;
+    }
+
+    #d2 p{
+        font-size: 1vw;
+        font-family: sans-serif, Arial, Helvetica; 
+    }
+
+    .fthead{
+        font-size: 1.3vw;
+        font-family: sans-serif, Arial, Helvetica; 
+    }
+
+    #d3{
+        width: 20%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4%;
+    }
+
+    #d3 p{
+        font-family: sans-serif, Arial, Helvetica; 
+        font-size: 1vw;
+        position: relative;
+        top: 10%;   
+    }
+
+    /*
+        CSS for JS
+    */
+    .bdy{
+        background-color: black;
+    }
+
+    .ex{
+        font-size: 3vw;
+        color: whitesmoke;
+        position: relative;
+        left: 19%;
+    }
+
+    .linya{
+        border-bottom: 3px solid black;
+        width: 60%;
+    }
+
+    .lbl01{
+        position: relative;
+        left: 37%;
+        font-size: 2vw;
+        color: whitesmoke;
+    }
+
+    .lbl02{
+        position: relative;
+        font-size: 2vw;
+        color: whitesmoke;
+    }
+    @media only screen and (max-width: 800px){
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+    /*
+        CSS NAV AND SECTION 1
+    */
+    #Sec1{
+        width: 100%;
+        height: 70vh;
+        background-color: transparent;
+    }
+
+    nav{
+        background-color: whitesmoke;
+        border-bottom: solid 0.5vh black;
+        width: 100%;
+        height: 10vh;
+        display: flex;
+        flex-direction: row;
+        gap: 2%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #Logo-Container{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 25%;
+    }
+
+    .logo{
+        width: 100%;
+    }
+
+    .al{
+        text-decoration: none;
+        color: black;
+        font-family: sans-serif, Arial, Helvetica;
+        font-size: 1.5vw;
+    }
+
+    .al:hover{
+        text-decoration: none;
+        color: black;
+        font-family: sans-serif, Arial, Helvetica;
+        font-size: 1.8vh;
+        padding: 0.2%;
+        border-bottom: solid black 0.5vh;
+        transition: 0.5s;
+    }
+
+    .themebtn{
+        background-color: whitesmoke;
+        border: 0;
+        font-family: sans-serif, Arial, Helvetica;
+        font-size: 1.8vh;
+    }
+
+    .themebtn:hover{
+        text-decoration: none;
+        color: black;
+        font-family: sans-serif, Arial, Helvetica;
+        font-size: 1.1vw;
+        transition: 0.5s;
+    }
+
+    /*
+        CSS FOR THE video
+    */
+    #Pic-Container{
+        width: 100%;
+        background-color: transparent;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Pic-frame{
+        width: 100%;
+        height: 60vh;
+    }
+
+    .Pic{
+        width: 100%;
+        height: 80%;
+        
+    }
+
+    .text{
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+        color: whitesmoke;
+        font-family: sans-serif, Arial, Helvetica;
+        font-size: 3.5vw;
+        padding: 20px;
+        border: whitesmoke solid 3px;
+        position: relative;
+        bottom: 40%;  
+    }
+
+    /*
+        CSS NAV AND SECTION 2
+    */
+    #Sec2{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        background-color: transparent;
+    }
+
+    #Nav-Filter{
+        width: 100%;
+        height: 10vh;
+        display: flex;
+        flex-direction: row;
+        border-top: 5px solid gainsboro;
+        border-bottom: 5px solid gainsboro;
+        background-color: white;
+        box-shadow: 10px 0px 10px gainsboro;
+    }
+
+    .lft{
+        width: 60%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+    }
+
+    .lft h1{
+    font-size: 1.5vw;
+    margin-left: 5%;
+    }
+
+    .rht{
+        width: 40%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        align-items: center;
+    }
+
+    .rht button{
+        font-size: 1.5vw;
+        width: 11%;
+        height: 80%;
+        margin-right: 5%;
+        border: transparent;
+    }
+
+    .rht button img{
+        font-size: 1.5vw;
+        width: 100%;
+        height: 100%;
+        margin-right: 5%;
+    }
+
+    header{
+        width: 100%;
+        height: 15vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header h1{
+        font-size: 3vw;
+    }
+
+    hr{
+        border-bottom: 3px solid black;
+        width: 60%;
+    }
+
+    #pic-cont{
+        width: 98%;
+        height: 25vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 20%;
+    }
+
+    #pic-cont div{
+        width: 25%;
+        height: 95%;
+        overflow: hidden;
+    }
+
+    #pic-cont div:hover {
+        width: 25%;
+        height: 95%;
+        overflow: hidden;
+        box-shadow: 10px 10px rgba(46, 46, 46, 0.205);
+        transition: 2s;
+    }
+
+    #pic-cont div img{
+        width: 100%;
+        height: 100%;
+    }
+
+    #pic-cont div img:hover {
+        width: 100%;
+        height: 100%;
+        scale: 1.2;
+        transition: 2s;
+        box-shadow: 10px 10px rgba(46, 46, 46, 0.205);
+    }
+
+    #label-cont{
+        width: 100%;
+        height: 15vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 20%;
+    }
+
+    #label-cont div{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+    }
+
+    #label-cont label{
+        font-size: 2vw;
+    }
+
+    .lbl1{
+        position: relative;
+        left: 36%;
+        bottom:6.3vh;
+    }
+
+    .lbl11{
+        position: relative;
+        bottom:6.3vh;
+        left: 36%;
+        color: red;
+    }
+
+    .lbl2{
+        position: relative;
+        bottom:6.3vh;
+        right: 0.8vh;
+        
+    }
+
+    .lbl22{
+        position: relative;
+        bottom:6.3vh;
+        right: 0.8vh;;
+        color: red;
+    }
+
+
+    .lbl101{
+        position: relative;
+        right: 0.5%;
+    }
+
+    .lbl110{
+        position: relative;
+        left: 29%;
+        color: red;
+    }
+
+    .lbl111{
+        position: relative;
+        right: 0.5%;
+        color: red;
+    }
+
+    /*
+        CSS FOR FOOTER
+    */
+    #footer{
+        margin-bottom: 0%;
+        width: 100%;
+        height: 15vh;
+        background-color: gainsboro;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #d1{
+        width: 20%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .lg{
+        width: 40%;
+    }
+
+    #d2{
+        width: 20%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4%;
+    }
+
+    #d2 p{
+        font-size: 1vw;
+        font-family: sans-serif, Arial, Helvetica; 
+    }
+
+    .fthead{
+        font-size: 1.3vw;
+        font-family: sans-serif, Arial, Helvetica; 
+    }
+
+    #d3{
+        width: 20%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4%;
+    }
+
+    #d3 p{
+        font-family: sans-serif, Arial, Helvetica; 
+        font-size: 1vw;
+        position: relative;
+        top: 10%;   
+    }
+
+    /*
+        CSS for JS
+    */
+    .bdy{
+        background-color: black;
+    }
+
+    .ex{
+        font-size: 3vw;
+        color: whitesmoke;
+        position: relative;
+        left: 19%;
+    }
+
+    .linya{
+        border-bottom: 3px solid black;
+        width: 60%;
+    }
+
+    .lbl01{
+        position: relative;
+        left: 37%;
+        font-size: 2vw;
+        color: whitesmoke;
+    }
+
+    .lbl02{
+        position: relative;
+        font-size: 2vw;
+        color: whitesmoke;
+    }
+
+    }
+    </style>
+    <script>
+        let filterPic = false;
+        function filter() {
+        if (filterPic === true) {
+            document.querySelector('.igcont1').innerHTML = '<img src="./Images/BAGS_PAGE/SEC2/TRES_TOTE.png">';
+            document.querySelector('.igcont2').innerHTML = '<img src="./Images/BAGS_PAGE/SEC2/UNO_TOTE.png">';
+            document.querySelector('.lbl1').innerHTML = '<label class="lbl101">Tres Tote</label>';
+            document.querySelector('.lbl11').innerHTML = '<label class="lbl111">Php. 300</label>';
+            document.querySelector('.lbl2').innerHTML = '<label class="lbl2">Uno Tote</label>';
+            document.querySelector('.lbl22').innerHTML = '<label class="lbl22">Php. 300</label>';
+        } 
+        else {
+            document.querySelector('.igcont1').innerHTML = '<img src="./Images/BAGS_PAGE/SEC3/CARDIBLURRED_TOTE.png">';
+            document.querySelector('.igcont2').innerHTML = '<img src="./Images/BAGS_PAGE/SEC3/CARDINAL_TOTE.png">';
+            document.querySelector('.lbl1').innerHTML = '<label class="lbl101">Cardinals (Blurred)</label>';
+            document.querySelector('.lbl11').innerHTML = '<label class="lbl111">Php. 300</label>';
+            document.querySelector('.lbl2').innerHTML = '<label class="lbl2">Cardinals</label>';
+            document.querySelector('.lbl22').innerHTML = '<label class="lbl22">Php. 300</label>';
+        }
+
+        filterPic = !filterPic;
+}
+
+        function dk(){
+            document.querySelector('body').classList.toggle('bdy')
+            
+            document.querySelector('.exp').classList.toggle('ex')
+            document.querySelector('.exp').classList.toggle('linya')
+
+            document.querySelector('.lbl1').classList.toggle('lbl01')
+            document.querySelector('.lbl2').classList.toggle('lbl02')
+        }
+    </script>
+</head>
+<body>
+    <section id="Sec1">
+        <nav>
+            <div id="Logo-Container">
+                <a href="index.html"><img src="./Images/HOMEPAGE/Brand/LOGO.png" class="logo"></a>
+            </div>
+            <a href="collections.html" class="al">COLLECTIONS</a>
+            <a href="sale.html" class="al">SALE</a>
+            <a href="newarrivals.html" class="al">NEW ARRIVALS</a>
+            <a href="lanyards.html" class="al">LANYARDS</a>
+            <a href="bags.html" class="al">BAGS</a>
+            <a href="store.html" class="al">STORE</a>
+            <a href="aboutus.html" class="al">ABOUT US</a>
+            <input type="button" value="🌙" class="themebtn" onclick="dk()">
+        </nav>
+
+        <div id="Pic-Container">   
+          <div class="Pic-frame">
+            <img src ="./Images/BAGS_PAGE/SEC1/BAGS_BANNER.png" class="Pic" autoplay loop></img>
+          </div>   
+        </div>
+    </section>
+
+    <section id="Sec2">
+        <div id="Nav-Filter">
+            <div class="lft"><h1>STORE | BAGS</h1></div>
+            <div class="rht"><button src="./Images/BAGS_PAGE/SEC2/Filter.png" class="btn" onclick="filter()"><img src="./Images/BAGS_PAGE/SEC2/Filter.png"></button></div>
+        </div>
+
+        <header><h1 class="exp">Express yourself</h1><hr></header>
+
+        <div id="pic-cont">
+            <div class="igcont1"><img src="./Images/BAGS_PAGE/SEC2/TRES_TOTE.png" class="pic1"></div>
+            <div class="igcont2"><img src="./Images/BAGS_PAGE/SEC2/UNO_TOTE.png" class="pic2"></div>
+        </div>
+
+        <div id="label-cont">
+            <div><label class="lbl1">Tres Tote</label><label class="lbl11">Php. 300</label></div>
+            <div><label class="lbl2">Uno Tote</label><label class="lbl22">Php. 300</label></div>
+        </div>
+    </section>
+
+    <section id="footer"> 
+        <div id="d1">
+            <img src="./Images/HOMEPAGE/Brand/D.png" class="lg">
+        </div>
+
+        <div id="d2">
+            <h1 class="fthead">DEVELOPERS</h1>
+            <p>YVES DELA CRUZ</p>
+            <p>KARL FALCULAN</p>
+            <p>EVAN VINCENT LIM</p>
+        </div>
+
+        <div id="d3"> 
+            <p>LUIS ARNOLD RESPCIO</p>
+            <p>DYLAN SALAZAR</p>
+            <p>DANIEL SANTILLAN</p>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    }
+
+    /*
+        CSS NAV AND SECTION 1
+    */
+    #Sec1{
+        width: 100%;
+        height: 75vh;
+        background-color: transparent;
+    }
+
+    nav{
+        background-color: whitesmoke;
+        border-bottom: solid 0.5vh black;
+        width: 100%;
+        height: 13vh;
+        display: flex;
+        flex-direction: row;
+        gap: 2%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #Logo-Container{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 10%;
+    }
+
+    .logo{
+        width: 100%;
+    }
+
+    .al{
+        text-decoration: none;
+        color: black;
+        font-family: sans-serif, Arial, Helvetica;
+        font-size: 1vw;
+    }
+
+    .al:hover{
+        text-decoration: none;
+        color: black;
+        font-family: sans-serif, Arial, Helvetica;
+        font-size: 1.8vh;
+        padding: 0.2%;
+        border-bottom: solid black 0.5vh;
+        transition: 0.5s;
+    }
+
+    .themebtn{
+        background-color: whitesmoke;
+        border: 0;
+        font-family: sans-serif, Arial, Helvetica;
+        font-size: 1.8vh;
+    }
+
+    .themebtn:hover{
+        text-decoration: none;
+        color: black;
+        font-family: sans-serif, Arial, Helvetica;
+        font-size: 1.1vw;
+        transition: 0.5s;
+    }
+
+    /*
+        CSS FOR THE video
+    */
+    #video-Container{
+        width: 100%;
+        height: 87vh;
+        background-color: transparent;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .vid-frame{
+        width: 100%;
+        height: 62vh;
+        background-color: transparent;
+        position: relative;
+        top: 7%;
+    }
+
+    .imghd{
+        width: 100%;
+        height: 62vh;
+    }
+
+    /*
+        CSS FOR THE S2
+    */
+
+    #Sec2{
+        width: 100%;
+        height: 70vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3%;
+        background-color: transparent;
+    }
+
+
+    #Sec2 p{
+        font-size: 2vw;
+        text-align: center;
+    }
+
+    /*
+        CSS FOR THE S3
+    */
+
+    #Sec3{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+    }
+
+    #hd-cont{
+        width: 100%;
+        height: 12vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #hd-cont h1{
+        font-size: 3vw;
+    }
+
+    hr{
+        width: 100%;
+    }
+
+    #content-area{
+        width: 100%;
+        height: 88vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #content-frame{
+        background-color:  darkgray;
+        width: 100%;
+        height: 60vh;
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+    }
+    .s3img{
+        width: 100%;
+        height: 100%;
+    
+      
+    }
+
+    .right-area{
+        position: relative;
+        right: 4%;
+        width: 45%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 8%;
+    }
+
+    .right-area h1{
+        font-size: 2.5vw;
+    }
+
+    .right-area h4{
+        font-size: 1.2vw;
+        position: relative;
+        bottom: 6%;
+    }
+
+    .s3p1, .s3p2{
+        font-size: 1.5vw;
+        text-align: center;
+    }
+
+    /*
+        CSS FOR THE FOOTER
+    */
+
+    #footer{
+        margin-bottom: 0%;
+        width: 100%;
+        height: 15vh;
+        background-color: gainsboro;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #d1{
+        width: 20%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .lg{
+        width: 40%;
+    }
+
+    #d2{
+        width: 20%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4%;
+    }
+
+    #d2 p{
+        font-size: 1vw;
+        font-family: sans-serif, Arial, Helvetica; 
+    }
+
+    .fthead{
+        font-size: 1.3vw;
+        font-family: sans-serif, Arial, Helvetica; 
+    }
+
+    #d3{
+        width: 20%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4%;
+    }
+
+    #d3 p{
+        font-family: sans-serif, Arial, Helvetica; 
+        font-size: 1vw;
+        position: relative;
+        top: 10%;   
+    }
+
+    /*
+        CSS FOR THE JS FUNCTION
+    */
+    .by{
+        background-color: black;
+    }
+
+    .p01{
+        font-size: 2vw;
+        text-align: center;
+        color: whitesmoke;
+    }
+
+    .p02{
+        font-size: 2vw;
+        text-align: center;
+        color: whitesmoke;
+    }
+
+    .lw{
+        font-size: 2vw;
+        color: whitesmoke;
+    }
+        
+    @media only screen and (max-width: 800px){
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    }
+
+    /*
+        CSS NAV AND SECTION 1
+    */
+    #Sec1{
+        width: 100%;
+        height: 70xvh;
+        background-color: transparent;
+    }
+
+    nav{
+        background-color: whitesmoke;
+        border-bottom: solid 0.5vh black;
+        width: 100%;
+        height: 10vh;
+        display: flex;
+        flex-direction: row;
+        gap: 2%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #Logo-Container{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 25%;
+    }
+
+    .logo{
+        width: 100%;
+    }
+
+    .al{
+        text-decoration: none;
+        color: black;
+        font-family: sans-serif, Arial, Helvetica;
+        font-size: 1.5vw;
+    }
+
+    .al:hover{
+        text-decoration: none;
+        color: black;
+        font-family: sans-serif, Arial, Helvetica;
+        font-size: 1.8vh;
+        padding: 0.2%;
+        border-bottom: solid black 0.5vh;
+        transition: 0.5s;
+    }
+
+    .themebtn{
+        background-color: whitesmoke;
+        border: 0;
+        font-family: sans-serif, Arial, Helvetica;
+        font-size: 1.8vh;
+    }
+
+    .themebtn:hover{
+        text-decoration: none;
+        color: black;
+        font-family: sans-serif, Arial, Helvetica;
+        font-size: 1.1vw;
+        transition: 0.5s;
+    }
+
+    /*
+        CSS FOR THE video
+    */
+    #video-Container{
+        width: 100%;
+        background-color: transparent;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .vid-frame{
+        width: 100%;
+        height: 60vh;
+        background-color: transparent;
+    }
+
+    .imghd{
+        width: 100%;
+        height: 80%;
+    }
+
+    /*
+        CSS FOR THE S2
+    */
+
+    #Sec2{
+        width: 100%;
+        height: 40vh;
+        display: flex;
+        flex-direction: column;
+        gap: 3%;
+        background-color: transparent;
+    }
+
+
+    #Sec2 p{
+        font-size: 2.5vw;
+        text-align: center;
+    }
+
+    /*
+        CSS FOR THE S3
+    */
+
+    #Sec3{
+        width: 100%;
+        height: 60vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+    }
+
+    #hd-cont{
+        width: 100%;
+        height: 12vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #hd-cont h1{
+        font-size: 3vw;
+    }
+
+    hr{
+        width: 100%;
+    }
+
+    #content-area{
+        width: 100%;
+        height: 88vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #content-frame{
+        background-color:  darkgray;
+        width: 100%;
+        height: 30vh;
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+    }
+    .s3img{
+        width: 60%;
+        height: 100%;
+    
+      
+    }
+
+    .right-area{
+        position: relative;
+        right: 4%;
+        width: 45%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 8%;
+    }
+
+    .right-area h1{
+        font-size: 2.5vw;
+    }
+
+    .right-area h4{
+        font-size: 1.2vw;
+        position: relative;
+        bottom: 6%;
+    }
+
+    .s3p1, .s3p2{
+        font-size: 1.8vw;
+        text-align: center;
+    }
+
+    /*
+        CSS FOR THE FOOTER
+    */
+
+    #footer{
+        margin-bottom: 0%;
+        width: 100%;
+        height: 15vh;
+        background-color: gainsboro;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #d1{
+        width: 40%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .lg{
+        width: 40%;
+    }
+
+    #d2{
+        width: 20%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4%;
+    }
+
+    #d2 h1 {
+        font-size: 2vw;
+    }
+    
+    #d2 p{
+        font-size: 1.5vw;
+        font-family: sans-serif, Arial, Helvetica; 
+    }
+
+    .fthead{
+        font-size: 1.3vw;
+        font-family: sans-serif, Arial, Helvetica; 
+    }
+
+    #d3{
+        width: 20%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4%;
+    }
+
+    #d3 p{
+        font-family: sans-serif, Arial, Helvetica; 
+        font-size: 1.5vw;
+        position: relative;
+        top: 10%;   
+    }
+
+    /*
+        CSS FOR THE JS FUNCTION
+    */
+    .by{
+        background-color: black;
+    }
+
+    .p01{
+        font-size: 2vw;
+        text-align: center;
+        color: whitesmoke;
+    }
+
+    .p02{
+        font-size: 2vw;
+        text-align: center;
+        color: whitesmoke;
+    }
+
+    .lw{
+        font-size: 2vw;
+        color: whitesmoke;
+    }
+    
+}
+    </style>
+    <script>
+        function drk() {
+            document.querySelector('body').classList.toggle('by')
+            document.querySelector('.s2p1').classList.toggle('p01')
+            document.querySelector('.s2p2').classList.toggle('p01')
+            document.querySelector('.mod').classList.toggle('lw')
+        }
+    </script>
+</head>
+<body>
+
+    <section id="Sec1">
+        <nav>
+            <div id="Logo-Container">
+                <a href="index.html"><img src="./Images/HOMEPAGE/Brand/LOGO.png" class="logo"></a>
+            </div>
+            <a href="collections.html" class="al">COLLECTIONS</a>
+            <a href="sale.html" class="al">SALE</a>
+            <a href="newarrivals.html" class="al">NEW ARRIVALS</a>
+            <a href="lanyards.html" class="al">LANYARDS</a>
+            <a href="bags.html" class="al">BAGS</a>
+            <a href="store.html" class="al">STORE</a>
+            <a href="aboutus.html" class="al">ABOUT US</a>
+            <input type="button" value="🌙" class="themebtn" onclick="drk()">
+        </nav>
+
+            <div id="video-Container">
+                <div class="vid-frame">
+                  <img src="./Images/ABOUTUS_PAGE/SEC1/AboutUsHd.png" class="imghd">
+                </div>
+            </div>
+    </section>
+
+    <section id="Sec2">
+        <p class="s2p1">Cardistyles believes in the fashion of ornaments as it is more than an
+        <br> accessory but an influence to enhance the aesthetics of a person's clothing
+        <br> preferences. With our collaboration with Mapua University, we aim to
+        <br>support our institution's outstanding performance and reputation as one of 
+        <br>the Philippine's top universities known nationally and overseas.</p>
+            
+        <p class="s2p2">We offer selections of comfortable and quality merchandises that goes 
+        <br>along with the current trends-establishing an influence to support the
+        <br>evolving fashion industries that lets you do more, albeit with less.</p>
+    </section>
+
+    <section id="Sec3">
+        <div id="hd-cont">
+            <h1 class="mod">MEET OUR DESIGNERS</h1>
+        </div>
+
+        <hr>
+
+        <div id="content-area">
+
+            <div id="content-frame">
+                    <img src="./Images/ABOUTUS_PAGE/SEC3/profpic.png" class="s3img">
+                <div class="right-area">
+                    <h1>LUIS RESPECIO</h1>
+                    <h4>LEAD DESIGNER</h4>
+
+                    <p class="s3p1">I am passionate in sharing my skills and creativity
+                    <br>in the merchandises I design for my institution,
+                    <br>along with my talented friends who have been
+                    <br> supporting me through this business.</p>
+
+                    <p class="s3p2">I wish to share this passion to my organization's
+                    <br>communities to express my loyalty and
+                    <br>responsibility as a student</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section id="footer"> 
+        <div id="d1">
+            <img src="./Images/HOMEPAGE/Brand/D.png" class="lg">
+        </div>
+
+        <div id="d2">
+            <h1 class="fthead">DEVELOPERS</h1>
+            <p>YVES DELA CRUZ</p>
+            <p>KARL FALCULAN</p>
+            <p>EVAN VINCENT LIM</p>
+        </div>
+
+        <div id="d3"> 
+            <p>LUIS ARNOLD RESPCIO</p>
+            <p>DYLAN SALAZAR</p>
+            <p>DANIEL SANTILLAN</p>
+        </div>
+    </section>
+
+
+
+    
+</body>
+</html>
